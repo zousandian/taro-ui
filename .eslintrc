@@ -20,7 +20,10 @@
       }
     },
     {
-      "files": ["packages/components/config/*.js"],
+      "files": [
+        "packages/components/config/*.js",
+        "packages/taro-ui-demo/config/*.js"
+      ],
       "rules": {
         "import/no-commonjs": "off"
       }
@@ -35,6 +38,15 @@
         "react/react-in-jsx-scope": "off",
         "react/no-find-dom-node": "off",
         "no-unused-vars": ["error", { "varsIgnorePattern": "Nerv" }]
+      }
+    },
+    {
+      "files": [
+        "packages/taro-ui-demo/**/*.tsx",
+        "packages/taro-ui-demo/**/*.tsx"
+      ],
+      "rules": {
+        "no-console": "off"
       }
     },
     {
