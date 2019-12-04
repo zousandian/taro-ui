@@ -9,7 +9,6 @@
     "jsxFactory": "Taro.createElement",
     "noImplicitAny": false,
     "allowSyntheticDefaultImports": true,
-    "outDir": "lib",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strictNullChecks": true,
