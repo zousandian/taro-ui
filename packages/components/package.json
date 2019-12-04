@@ -1,0 +1,65 @@
+{
+  "name": "@taroui/components",
+  "version": "3.0.0-beta.0",
+  "description": "Taro UI components.",
+  "main": "dist/index.js",
+  "main:h5": "dist/h5/index.js",
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
+  "scripts": {
+    "build": "cross-env TARO_BUILD_TYPE=component taro build --ui",
+    "test": "npm run build && cross-env NODE_ENV=test && jest --coverage",
+    "prepublishOnly": "npm run build"
+  },
+  "license": "MIT",
+  "author": "O2Team <aotu.io>",
+  "homepage": "https://taro-ui.aotu.io",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nervjs/taro-ui.git"
+  },
+  "keywords": [
+    "taro",
+    "taro-ui",
+    "ui",
+    "components"
+  ],
+  "dependencies": {
+    "@types/react": "^16.4.6",
+    "bind-decorator": "^1.0.11",
+    "classnames": "^2.2.6",
+    "dayjs": "^1.7.7",
+    "lodash": "^4.17.10",
+    "prop-types": "^15.6.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-rc.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.55",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-transform-react-jsx": "^7.0.0-beta.55",
+    "@babel/preset-env": "^7.0.0-beta.55",
+    "@tarojs/cli": "2.0.0-beta.5",
+    "@tarojs/components": "2.0.0-beta.5",
+    "@tarojs/taro": "2.0.0-beta.5",
+    "@tarojs/taro-h5": "2.0.0-beta.5",
+    "@types/classnames": "^2.2.9",
+    "@types/node": "^12.12.14",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "23.6.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-plugin-transform-jsx-stylesheet": "^0.6.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-taroapi": "2.0.0-beta.5",
+    "babel-preset-env": "^1.6.1",
+    "jest": "23.6.0",
+    "nerv-server": "^1.5.1",
+    "nerv-test-utils": "^1.5.1",
+    "nervjs": "^1.5.5",
+    "nerv-devtools": "^1.5.5",
+    "typescript": "^3.7.2"
+  }
+}

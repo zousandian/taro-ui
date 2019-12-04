@@ -17,14 +17,9 @@
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "preserve",
-    "typeRoots": [
-      "node_modules/@types",
-      "global.d.ts",
-      "types"
-    ],
     "resolveJsonModule": true,
     "paths": {
-      "taro-ui": [ "src/ui.ts" ]
+      "@taroui/components": [ "src/index.ts" ]
     }
   },
   "compileOnSave": false
