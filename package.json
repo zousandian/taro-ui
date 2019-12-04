@@ -2,13 +2,19 @@
   "name": "taro-ui",
   "version": "2.2.4",
   "description": "UI KIT for Taro",
-  "main": "dist/index.js",
-  "main:h5": "dist/h5/index.js",
-  "sideEffects": [
-    "*.scss",
-    "*.css"
-  ],
-  "types": "./types/index.d.ts",
+  "author": "O2Team <aotu.io>",
+  "homepage": "https://taro-ui.aotu.io",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:nervjs/taro-ui.git"
+  },
+  "license": "MIT",
+  "private": true,
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
+  },
   "scripts": {
     "dev:weapp": "npm run build:weapp -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
@@ -48,24 +54,6 @@
       "git add"
     ]
   },
-  "keywords": [
-    "taro",
-    "taro-ui",
-    "ui"
-  ],
-  "files": [
-    "dist",
-    "types",
-    "src/**/interface.ts",
-    "src/**/*.d.ts"
-  ],
-  "author": "O2Team <aotu.io>",
-  "homepage": "https://taro-ui.aotu.io",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:nervjs/taro-ui.git"
-  },
-  "license": "MIT",
   "dependencies": {
     "@types/react": "^16.7.3",
     "bind-decorator": "^1.0.11",
@@ -140,6 +128,7 @@
     "husky": "^3.0.4",
     "jest": "23.6.0",
     "json-loader": "^0.5.7",
+    "lerna": "^3.19.0",
     "lint-staged": "^9.5.0",
     "loader-utils": "^1.1.0",
     "markdown-it": "^10.0.0",
