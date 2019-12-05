@@ -13,6 +13,7 @@ project.config.json
 
 site/
 docs/h5/
+static/h5/
 
 coverage
 

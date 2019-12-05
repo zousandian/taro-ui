@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev:doc": "npm run build:h5-static && node ./build/dev-server",
-    "build:h5-static": "npm run build:h5 && node ./build/build-static",
+    "build:h5-static": "lerna run --scope taro-ui-demo build:h5 --stream && node ./build/copy-h5-static",
     "build:doc": "npm run build:h5-static && node ./build/build-docs",
     "build": "lerna run build --stream",
     "lint": "eslint ./packages --fix",
@@ -26,7 +26,10 @@
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "eslintConfig": {
-    "extends": ["o2team", "taro"],
+    "extends": [
+      "o2team",
+      "taro"
+    ],
     "parser": "babel-eslint",
     "env": {
       "jest": true
@@ -36,14 +39,30 @@
       "prefer-rest-params": "off",
       "arrow-body-style": "warn",
       "taro/custom-component-children": "off",
-      "no-unused-vars": ["error", { "varsIgnorePattern": "Taro" }],
-      "no-console": ["error", { "allow": ["warn", "error"] }]
+      "no-unused-vars": [
+        "error",
+        {
+          "varsIgnorePattern": "Taro"
+        }
+      ],
+      "no-console": [
+        "error",
+        {
+          "allow": [
+            "warn",
+            "error"
+          ]
+        }
+      ]
     },
     "overrides": [
       {
-        "files": ["build/*.js"],
+        "files": [
+          "build/*.js"
+        ],
         "rules": {
-          "import/no-commonjs": "off"
+          "import/no-commonjs": "off",
+          "no-console": "off"
         }
       },
       {
@@ -64,7 +83,12 @@
           "taro/no-stateless-component": "off",
           "react/react-in-jsx-scope": "off",
           "react/no-find-dom-node": "off",
-          "no-unused-vars": ["error", { "varsIgnorePattern": "Nerv" }]
+          "no-unused-vars": [
+            "error",
+            {
+              "varsIgnorePattern": "Nerv"
+            }
+          ]
         }
       },
       {
@@ -77,9 +101,15 @@
         }
       },
       {
-        "files": ["**/*.ts", "**/*.tsx"],
+        "files": [
+          "**/*.ts",
+          "**/*.tsx"
+        ],
         "parser": "@typescript-eslint/parser",
-        "plugins": ["react", "@typescript-eslint"],
+        "plugins": [
+          "react",
+          "@typescript-eslint"
+        ],
         "env": {
           "jest": true
         },
@@ -92,13 +122,20 @@
           "arrow-body-style": "warn",
           "react/jsx-filename-extension": [
             2,
-            { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
+            {
+              "extensions": [
+                ".js",
+                ".jsx",
+                ".ts",
+                ".tsx"
+              ]
+            }
           ],
           "taro/custom-component-children": "off"
         }
       }
     ]
-  },  
+  },
   "stylelint": {
     "extends": "stylelint-config-standard",
     "plugins": [
@@ -183,6 +220,7 @@
     "husky": "^3.0.4",
     "lerna": "^3.19.0",
     "lint-staged": "^9.5.0",
+    "ora": "^4.0.3",
     "stylelint": "^12.0.0",
     "stylelint-config-standard": "^19.0.0",
     "stylelint-scss": "^3.2.0",
