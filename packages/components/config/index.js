@@ -17,9 +17,6 @@ const config = {
       'transform-object-rest-spread'
     ]
   },
-  alias: {
-    '@taroui/components': path.resolve(__dirname, '../src/index.ts'),
-  },
   h5: {},
 }
 

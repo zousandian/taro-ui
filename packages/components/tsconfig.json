@@ -16,10 +16,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "preserve",
-    "resolveJsonModule": true,
-    "paths": {
-      "@taroui/components": [ "src/index.ts" ]
-    }
+    "resolveJsonModule": true
   },
   "compileOnSave": false
 }
