@@ -18,11 +18,11 @@
     "dev:doc": "npm run build:h5-static && node ./build/dev-server",
     "build:h5-static": "npm run build:h5 && node ./build/build-static",
     "build:doc": "npm run build:h5-static && node ./build/build-docs",
+    "build": "lerna run build --stream",
     "lint": "eslint ./packages --fix",
     "lint:style": "stylelint 'packages/**/*.scss' --syntax scss",
     "lint:style-fix": "stylelint 'packages/**/*.scss' --syntax scss --fix",
-    "test": "cross-env NODE_ENV=test && jest --coverage",
-    "test:ci": "npm run build:h5 && npm run test",
+    "test": "lerna run test --stream",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
   },
   "eslintConfig": {
