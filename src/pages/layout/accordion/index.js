@@ -26,6 +26,7 @@ export default class CardPage extends Taro.Component {
   }
 
   render () {
+    console.log(AtAccordion)
     const { value1, value2, value3, value4 } = this.state
 
     return (
