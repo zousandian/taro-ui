@@ -4,7 +4,7 @@ module.exports = {
     NODE_ENV: '"development"'
   },
   defineConstants: {},
-  weapp: {
+  mini: {
     module: {
       postcss: {
         // 小程序端样式引用本地资源内联
@@ -20,6 +20,17 @@ module.exports = {
       host: '0.0.0.0',
       disableHostCheck: true,
       port: 8080
+    },
+    babel: {
+      sourceMap: true,
+      presets: [
+        'env'
+      ],
+      plugins: [
+        'transform-class-properties',
+        'transform-decorators-legacy',
+        'transform-object-rest-spread'
+      ]
     }
   }
 }
